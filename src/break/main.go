@@ -39,5 +39,25 @@ func main() {
 	fmt.Println("The current sum is: ", sum)
 
 	//Exe2: 3 login attemps, if username="gary" and password="123456", then login successfully.  Otherwise, prompt how many chances left.
+	var username string
+	var password string
+	var i int = 1
+	for ; i <= 3; i++ {
+		fmt.Println("Please enter your username: ")
+		fmt.Scanln(&username)
+		fmt.Println("Please enter your password: ")
+		fmt.Scanln(&password)
 
+		if username == "gary" && password == "123456" {
+			fmt.Println("Login successfully")
+			break
+		} else {
+			if 3-i != 0 {
+				fmt.Printf("Login failed.  You have %d attempts left!\n", 3-i)
+			}
+		}
+	}
+	if i > 3 {
+		fmt.Println("Login unsuccessfully")
+	}
 }
