@@ -27,7 +27,7 @@ func main() {
 	var num2 float64
 	var op byte
 
-	fmt.Scanf("%f %f %v", &num1, &num2, &op)
+	fmt.Scanf("%f %f %c", &num1, &num2, &op)
 	result := calculator(num1, num2, op)
 	fmt.Println("result = ", result)
 }
